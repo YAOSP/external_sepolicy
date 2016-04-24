@@ -39,5 +39,6 @@ genfscon functionfs / u:object_r:functionfs:s0
 genfscon usbfs / u:object_r:usbfs:s0
 genfscon binfmt_misc / u:object_r:binfmt_miscfs:s0
 
-genfscon ntfs / u:object_r:ntfs:s0
-
+genfscon fuseblk / u:object_r:sdcard_external:s0
+genfscon exfat / u:object_r:sdcard_external:s0
+genfscon ntfs / u:object_r:sdcard_external:s0
