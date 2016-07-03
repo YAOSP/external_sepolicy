@@ -325,3 +325,6 @@
 # For EXFAT/F2FS/NTFS partitions marked "formattable"
 /system/bin/mkfs\.exfat     u:object_r:mkfs_exec:s0
 /system/bin/mkfs\.ntfs      u:object_r:mkfs_exec:s0
+
+# Lockscreen wallpaper
+/data/system/users/[0-9]+/keyguard_wallpaper   u:object_r:wallpaper_file:s0
