@@ -474,3 +474,10 @@ neverallow {
   userdebug_or_eng(`-uncrypt')
   -installd
 } shell_data_file:lnk_file read;
+
+# Allow apps to run the "df" command to look at disk usage
+allow domain block_device:dir { search getattr }; 
+allow domain block_device:blk_file getattr;
+allow domain cache_block_device:blk_file getattr;
+allow domain userdata_block_device:blk_file getattr;
+allow domain fuse_device:chr_file getattr;
