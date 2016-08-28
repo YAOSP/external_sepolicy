@@ -296,3 +296,8 @@ neverallow init app_data_file:lnk_file read;
 
 # init should never execute a program without changing to another domain.
 # neverallow init { file_type fs_type }:file execute_no_trans;
+
+# Allow formatting userdata or cache partitions
+allow init block_device:dir search;
+allow init userdata_block_device:blk_file rw_file_perms;
+allow init cache_block_device:blk_file rw_file_perms;
